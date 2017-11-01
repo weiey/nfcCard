@@ -22,7 +22,14 @@ import android.content.res.Resources;
 import com.sinpo.xnfc.R;
 import com.sinpo.xnfc.tech.Iso7816;
 
+/**
+ * 深圳通
+ */
 final class ShenzhenTong extends PbocCard {
+	/**
+	 * 选择公交卡应用的名字或者ID
+	 * 每个公交卡的名字都会不一样
+	 */
 	private final static byte[] DFN_SRV = { (byte) 'P', (byte) 'A', (byte) 'Y',
 			(byte) '.', (byte) 'S', (byte) 'Z', (byte) 'T' };
 

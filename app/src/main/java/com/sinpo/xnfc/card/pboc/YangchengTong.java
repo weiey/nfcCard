@@ -23,6 +23,9 @@ import com.sinpo.xnfc.R;
 import com.sinpo.xnfc.Util;
 import com.sinpo.xnfc.tech.Iso7816;
 
+/**
+ * 羊城通
+ */
 final class YangchengTong extends PbocCard {
 	private final static byte[] DFN_SRV = { (byte) 'P', (byte) 'A', (byte) 'Y',
 			(byte) '.', (byte) 'A', (byte) 'P', (byte) 'P', (byte) 'Y', };

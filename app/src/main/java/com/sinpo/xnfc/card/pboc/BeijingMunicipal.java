@@ -23,6 +23,10 @@ import com.sinpo.xnfc.R;
 import com.sinpo.xnfc.Util;
 import com.sinpo.xnfc.tech.Iso7816;
 
+/**
+ * 北京市政交通卡ID
+ * byte[] DFI_EP = { (byte) 0x10, (byte) 0x01 };
+ */
 final class BeijingMunicipal extends PbocCard {
 	private final static int SFI_EXTRA_LOG = 4;
 	private final static int SFI_EXTRA_CNT = 5;

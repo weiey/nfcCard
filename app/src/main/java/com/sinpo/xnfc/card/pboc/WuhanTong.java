@@ -23,6 +23,9 @@ import com.sinpo.xnfc.R;
 import com.sinpo.xnfc.Util;
 import com.sinpo.xnfc.tech.Iso7816;
 
+/**
+ * 武汉通
+ */
 final class WuhanTong extends PbocCard {
 	private final static int SFI_INFO = 5;
 	private final static int SFI_SERL = 10;

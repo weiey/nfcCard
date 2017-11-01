@@ -22,6 +22,9 @@ import android.content.res.Resources;
 import com.sinpo.xnfc.R;
 import com.sinpo.xnfc.tech.Iso7816;
 
+/**
+ * 长安通
+ */
 final class ChanganTong extends PbocCard {
 	private final static byte[] DFN_SRV = { (byte) 0xA0, (byte) 0x00,
 			(byte) 0x00, (byte) 0x00, (byte) 0x03, (byte) 0x86, (byte) 0x98,

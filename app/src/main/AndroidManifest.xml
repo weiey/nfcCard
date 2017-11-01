@@ -3,19 +3,21 @@
     package="com.sinpo.xnfc">
 
 
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme"
-    >
-        <activity android:name="NFCard" android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="NFCard"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateAlwaysHidden"
-            android:windowBackground="@null">
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowBackground="@null"
+            android:windowSoftInputMode="adjustUnspecified|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,15 +25,25 @@
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
-            <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+            <!--里面放的是Android支持的NFC类型的配置数据-->
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
+            <!--NDEF格式-->
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!--TAG格式-->
+            <intent-filter>
+                <action android:name = "android.nfc.action.NDEF_DISCOVERED" />
+                <data android:mimeType = "text/plain" />
+            </intent-filter>
+
         </activity>
     </application>
     <uses-permission android:name="android.permission.NFC" />
-    <uses-feature android:name="android.hardware.nfc"
+    <uses-feature
+        android:name="android.hardware.nfc"
         android:required="true" />
 </manifest>

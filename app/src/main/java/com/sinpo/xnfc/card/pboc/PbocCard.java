@@ -30,6 +30,10 @@ public class PbocCard {
 	protected final static byte[] DFI_MF = { (byte) 0x3F, (byte) 0x00 };
 	protected final static byte[] DFI_EP = { (byte) 0x10, (byte) 0x01 };
 
+	/***
+	 * select PSF (1PAY.SYS.DDF01)
+	 选择支付系统文件，它的名字是1PAY.SYS.DDF01。
+	 */
 	protected final static byte[] DFN_PSE = { (byte) '1', (byte) 'P',
 			(byte) 'A', (byte) 'Y', (byte) '.', (byte) 'S', (byte) 'Y',
 			(byte) 'S', (byte) '.', (byte) 'D', (byte) 'D', (byte) 'F',
