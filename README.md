@@ -42,11 +42,11 @@ byte[] cmd = { (byte) 0x00, // CLA Class(byte) 0xB2, // INS Instruction(byte) 0x
 ```java
 cmd = { (byte) 0x00, // CLA Class(byte) 0xB2, // INS Instruction(byte) index, // P1 Parameter 1(byte) 0xC4, // P2 Parameter 2(byte) 0x00, // Le};
 ```
-一条记录是23个字节byte[] data，
-对其解码如下
-data[0]-data[1]:indexdata[2]-data[4]:over,金额溢出?
-data[5]-data[8]:交易金额
-data[9]:如果等于0x06或者0x09，表示刷卡；否则是充值
-data[10]-data[15]:刷卡机或充值机编号
+一条记录是23个字节byte[] data， 
+对其解码如下  
+data[0]-data[1]:indexdata[2]-data[4]:over,金额溢出?  
+data[5]-data[8]:交易金额  
+data[9]:如果等于0x06或者0x09，表示刷卡；否则是充值  
+data[10]-data[15]:刷卡机或充值机编号  
 data[16]-data[22]:日期String.format("%02X%02X.%02X.%02X %02X:%02X:%02X",data[16], data[17], data[18], 
 data[19], data[20], data[21], data[22]);
